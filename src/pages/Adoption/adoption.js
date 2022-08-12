@@ -1,12 +1,14 @@
 import {Container, DogList, Dog} from '../Home/styles';
-import {useState, useEffect, setState} from 'react';
+import {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import Header from '../Parts/Header';
+import Footer from '../Parts/Footer';
 
 
 function Adoption(){
 
-const[dogs, setDogs] = useState([])
+const[dogs, setDogs] = useState([]);
+
   
 
  useEffect(() => {
@@ -21,18 +23,21 @@ const[dogs, setDogs] = useState([])
     <DogList>    
          {dogs.map(dog => {
             return(
-             <Dog key={dog.message}>
-             <Link to={`../Details/${dog.message}`}><img src={`${dog.message}`} alt="foto do cachorro"/></Link>
+             <Dog>
+             <Link to={`../Details/${dog}`}><img src={`${dog}`} alt="foto do cachorro"/></Link>
              <h2>Nome</h2>
-             <span>Raça</span>
-             <div className='buttons'>
-             <Link to={`../details/:message`} style={{ textDecoration: 'none' }} className='button'>DETALHES</Link>
+             <span>{dog.match(`breeds/(.*?)/`)}</span>  
+             <div className='info'>
+                  <p>Porte <span>***</span></p>
+                  <p>Idade <span>***</span></p>
+                  <p>Cidade<span>***</span></p>
+               </div> 
              <Link to={`../form`} style={{ textDecoration: 'none' }} className='button'>ADOTE!</Link>
-             </div>  
              </Dog>
             )
          })}
     </DogList>
+    <Footer />
    </Container>
   );
 }
