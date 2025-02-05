@@ -8,7 +8,7 @@ function Adoption() {
   const [dogs, setDogs] = useState([]);
 
   useEffect(() => {
-    fetch('https://dog.ceo/api/breeds/image/random/6')
+    fetch('https://dog.ceo/api/breeds/image/random/8')
       .then(response => response.json())
       .then(data => setDogs(data.message))
       .catch(error => console.error('Erro ao buscar os cães:', error));
