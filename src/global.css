@@ -17,6 +17,12 @@
   /*border: 1px solid black;*/
  
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
 
 body{
@@ -73,6 +79,9 @@ footer{
   flex-direction: column;
   align-items: center;
   gap: .2rem;
-  padding: 1rem;
   background-color: #f7f2f6;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 }
