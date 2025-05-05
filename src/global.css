@@ -60,7 +60,7 @@ header{
 
 nav{
   display: flex;
-   gap: 4rem;
+  gap: 4rem;
 }
 
 nav p:hover,
@@ -84,4 +84,17 @@ footer{
   width: 100%;
   text-align: center;
   padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+    display: none;
+  }
+  .logo{
+    font-size: 30px;
+  }
+  .sign-up{
+    font-size: 16px;
+  }
+  
 }
