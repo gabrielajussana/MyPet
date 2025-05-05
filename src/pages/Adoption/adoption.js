@@ -37,7 +37,7 @@ function Adoption() {
                 <p>Idade <span>***</span></p>
                 <p>Cidade <span>***</span></p>
               </div>
-              <Link to='../form' style={{ textDecoration: 'none' }} className='button'>ADOTE!</Link>
+              <Link to='../form' style={{ textDecoration: 'none', textAlign: 'center' }} state={{ dog: dog, breed: breed, image: dog, name: 'Nome do Pet', age: 'Idade', city: 'Cidade' }} className='button'>ADOTE!</Link>
             </Dog>
           );
         })}
